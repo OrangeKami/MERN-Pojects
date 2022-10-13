@@ -1,0 +1,26 @@
+
+
+.textfield {
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.textfield {
+    width: 90%;
+    margin-top:15px;
+}
+
+.fileInput {
+    width: 90%;
+    margin: 15px;
+}
+
+.ButtonSubmit {
+    width: 90%;
+    margin-bottom: 15px;
+}
