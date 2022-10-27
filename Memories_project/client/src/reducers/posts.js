@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   FETCH_ALL,
   CREATE,
@@ -5,6 +6,9 @@ import {
   DELETE,
   LIKE,
 } from "../constants/actionTypes";
+=======
+
+>>>>>>> 3ac36cf94fbdaf2987fe4adaae23b41d0f225e10
 
 export default (posts = [], action) => {
   switch (action.type) {
