@@ -1,8 +1,13 @@
-const workoutRouter = (app) => {
-  app.route("/workouts")
-    .get((req,res) => {
-        res.json({ message: "Workouts"})
-  })
-};
+import express from "express";
 
-export default workoutRouter;
+const router = express.Router();
+
+router.get('/', (req, res) => {
+    res.json({ message:"Workouts"})
+})
+
+router.get("/:id", (req, res) => {
+  res.json({ message: "Workouts by id" });
+});
+
+export default router;
