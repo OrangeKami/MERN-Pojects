@@ -1,6 +1,12 @@
 import express from "express";
+import mongoose from "mongoose";
+import  { workoutSchema } from "../models/workoutModel.js";
 
 const router = express.Router();
+
+
+const Workout = mongoose.model("Workout", workoutSchema);
+
 
 router.get('/', (req, res) => {
     res.json({ message:"Workouts"})
@@ -12,8 +18,15 @@ router.get("/:id", (req, res) => {
 });
 
 //  * post a new workeout
-router.post("/", (req, res) => {
-    res.json({ message: "Post new workeout" });
+router.post("/", async (req, res) => {
+    const {title, load, reps} = req.body;
+
+    try{
+      const workout = await Workout.create({title, load, reps})
+      res.status(200).json(workout)
+    } catch(err){
+      res.status(400).json({err: err.message})
+    }
 });
 
 // * delete  a workeout
