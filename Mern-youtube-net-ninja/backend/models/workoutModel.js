@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-export const workoutSchema = new Schema({
+const workoutSchema = new Schema({
   title: {
     type: String,
     required: true
@@ -19,4 +19,6 @@ export const workoutSchema = new Schema({
 
 
 
+var Workout = mongoose.model("Workout", workoutSchema);
 
+export default Workout;
