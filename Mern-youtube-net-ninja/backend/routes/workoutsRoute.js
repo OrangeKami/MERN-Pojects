@@ -15,6 +15,8 @@ router.post("/", createWorkout);
 router.delete("/:id", deleteWorkout);
 
 // *update a workeout
-router.put("/:id", updateWorkout);
+router.put("/:id", (req, res) => {
+  res.json({ message: "Update workeout" });
+});
 
 export default router;
