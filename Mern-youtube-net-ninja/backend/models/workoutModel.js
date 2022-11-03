@@ -1,8 +1,6 @@
 import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema;
-
-const workoutSchema = new Schema({
+const workoutSchema = mongoose.Schemaa({
   title: {
     type: String,
     required: true
