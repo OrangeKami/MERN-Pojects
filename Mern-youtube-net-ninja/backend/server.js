@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import workoutRouter from "./routes/workoutsRoute.js";
+import usersRouter from "./routes/usersRoute.js";
 
 dotenv.config();
 // * express app
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 
 // * routes
 app.use("/workouts", workoutRouter);
+app.use("/users", usersRouter);
 
 //  * connect to MongoDB
 mongoose

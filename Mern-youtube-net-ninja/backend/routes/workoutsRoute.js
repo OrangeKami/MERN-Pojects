@@ -1,7 +1,15 @@
 import express from "express";
-import { createWorkout, getWorkouts, getWorkout, deleteWorkout, updateWorkout } from "../controllers/workoutController.js";
-
 const router = express.Router();
+
+import {
+  createWorkout,
+  getWorkouts,
+  getWorkout,
+  deleteWorkout,
+  updateWorkout,
+} from "../controllers/workoutController.js";
+
+
 
 router.get("/", getWorkouts);
 
@@ -15,8 +23,6 @@ router.post("/", createWorkout);
 router.delete("/:id", deleteWorkout);
 
 // *update a workeout
-router.put("/:id", (req, res) => {
-  res.json({ message: "Update workeout" });
-});
+router.put("/:id", updateWorkout);
 
 export default router;

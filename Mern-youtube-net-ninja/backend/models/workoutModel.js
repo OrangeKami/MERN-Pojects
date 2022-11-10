@@ -1,20 +1,21 @@
-import mongoose from 'mongoose';
+import mongoose, { Schema } from "mongoose";
 
-const workoutSchema = mongoose.Schemaa({
-  title: {
-    type: String,
-    required: true
+const workoutSchema = new Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+    },
+    reps: {
+      type: Number,
+      required: true,
+    },
+    load: {
+      type: Number,
+      required: true,
+    },
   },
-  reps: {
-    type: Number,
-    required: true
-  },
-  load: {
-    type: Number,
-    required: true
-  }
-}, { timestamps: true});
-
-
+  { timestamps: true }
+);
 
 export default mongoose.model("Workout", workoutSchema);
